@@ -19,7 +19,7 @@ function All() {
     }
   }, []);
 
-  console.log(dataInForm);
+//   console.log(dataInForm);
 
   const deletePosition = (id) => {
     const filterArr = dataInForm.filter((item) => item.id !== id);

@@ -22,13 +22,13 @@ function Form() {
   useEffect(() => {
     const dataInStorage = localStorage.getItem("energyDrinks");
 
-    console.log("Loaded data:", dataInStorage);
+    // console.log("Loaded data:", dataInStorage);
 
     if (dataInStorage) {
       setDataInForm(JSON.parse(dataInStorage));
     }
 
-    console.log(dataInStorage);
+    // console.log(dataInStorage);
   }, []);
 
   useEffect(() => {
