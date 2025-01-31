@@ -2,6 +2,8 @@ import "./Form.scss";
 // import energyDrinks from "../energyDrinks.js";
 import { useEffect, useState } from "react";
 
+import noEnergetic from "../assets/image/no-energetic.png"
+
 function Form() {
   const [dataInForm, setDataInForm] = useState([]);
 
@@ -14,7 +16,7 @@ function Form() {
     caffeine: "",
     sugar: "",
     description: "",
-    image: "",
+    image: {noEnergetic},
   });
 
   useEffect(() => {
@@ -45,7 +47,7 @@ function Form() {
 
     const newData = { ...inputData, id: newId };
 
-    setDataInForm((prevData) => [...prevData, newData]);
+    setDataInForm((prevData) => prevData.length > 0 ? [...prevData, newData] : [newData]);
 
     setInputData({
       id: 0,
@@ -56,7 +58,7 @@ function Form() {
       caffeine: "",
       sugar: "",
       description: "",
-      image: "",
+      image: {noEnergetic},
     });
   };
 

@@ -1,0 +1,44 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  .content {
+    flex: 1;
+    padding-bottom: 2em;
+  }
+
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 2.5em;
+    display: flex;
+
+    .link-box {
+      width: 50%;
+      text-align: center;
+
+      .link {
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 5px 25px;
+
+        .icon {
+          color: white;
+          transition: color 0.3s ease;
+        }
+      }
+
+      .link.active {
+        .icon {
+          color: rgb(46, 46, 255);
+        }
+      }
+    }
+  }
+}
+
+// * {
+//   border: 1px solid greenyellow;
+// }
