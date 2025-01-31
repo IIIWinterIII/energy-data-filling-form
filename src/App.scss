@@ -4,7 +4,7 @@
 
   .content {
     flex: 1;
-    padding-bottom: 2em;
+    padding-bottom: 4em;
   }
 
   .navigation {
@@ -14,6 +14,9 @@
     width: 100%;
     font-size: 2.5em;
     display: flex;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.096);
 
     .link-box {
       width: 50%;
@@ -23,6 +26,7 @@
         text-decoration: none;
         border-radius: 3px;
         padding: 5px 25px;
+        transition: background-color 0.3s ease, ;
 
         .icon {
           color: white;
@@ -31,12 +35,14 @@
       }
 
       .link.active {
+        background-color: rgba(255, 255, 255, 0.096);
+        border-radius: 3px;
         .icon {
-          color: rgb(46, 46, 255);
+          color: rgb(151, 151, 151);
         }
-      }
+      }  
     }
-  }
+  } 
 }
 
 // * {

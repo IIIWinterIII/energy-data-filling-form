@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="app">
-      <main>
+      <main className="content">
         <Routes>
           <Route path="/" element={<Form />} />
           <Route path="/all" element={<All />} />

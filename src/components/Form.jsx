@@ -2,7 +2,7 @@ import "./Form.scss";
 // import energyDrinks from "../energyDrinks.js";
 import { useEffect, useState } from "react";
 
-import noEnergetic from "../assets/image/no-energetic.png"
+import noEnergetic from "../assets/image/no-energetic.png";
 
 function Form() {
   const [dataInForm, setDataInForm] = useState([]);
@@ -16,7 +16,7 @@ function Form() {
     caffeine: "",
     sugar: "",
     description: "",
-    image: {noEnergetic},
+    image: { noEnergetic },
   });
 
   useEffect(() => {
@@ -47,7 +47,9 @@ function Form() {
 
     const newData = { ...inputData, id: newId };
 
-    setDataInForm((prevData) => prevData.length > 0 ? [...prevData, newData] : [newData]);
+    setDataInForm((prevData) =>
+      prevData.length > 0 ? [...prevData, newData] : [newData]
+    );
 
     setInputData({
       id: 0,
@@ -58,7 +60,7 @@ function Form() {
       caffeine: "",
       sugar: "",
       description: "",
-      image: {noEnergetic},
+      image: { noEnergetic },
     });
   };
 
@@ -70,7 +72,7 @@ function Form() {
         {/* Name */}
         <section>Название</section>
         {/* <p>Сохранено: {dataInForm.map((item) => item.name).join(", ")}</p> */}
-        <p>Ввод: {inputData.name}</p>
+
         <input
           type="text"
           value={inputData.name}
@@ -85,7 +87,7 @@ function Form() {
         {/* Brand */}
         <section>Бренд</section>
         {/* <p>Сохранено: {dataInForm.map((item) => item.brand.length > 0 ? item.brand : "").join(", ")}</p> */}
-        <p>Ввод: {inputData.brand}</p>
+
         <input
           type="text"
           value={inputData.brand}
@@ -100,7 +102,7 @@ function Form() {
         {/* Flavor */}
         <section>Вкус</section>
         {/* <p>Сохранено: {dataInForm.map((item) => item.brand.length > 0 ? item.brand : "").join(", ")}</p> */}
-        <p>Ввод: {inputData.flavor}</p>
+
         <input
           type="text"
           value={inputData.flavor}
@@ -115,7 +117,7 @@ function Form() {
         {/* Volume */}
         <section>Объём</section>
         {/* <p>Сохранено:{dataInForm.map((item) => item.volume).join(", ")}</p> */}
-        <p>Ввод: {inputData.volume}</p>
+
         <select
           name="select"
           onChange={(e) =>
@@ -134,7 +136,7 @@ function Form() {
 
         {/* Caffeine */}
         <section>Кофеин</section>
-        <p>Ввод: {inputData.caffeine}</p>
+
         <input
           type="text"
           value={inputData.caffeine}
@@ -148,7 +150,7 @@ function Form() {
 
         {/* Sugar */}
         <section>Сахар</section>
-        <p>Ввод: {inputData.sugar}</p>
+
         <input
           type="text"
           value={inputData.sugar}
@@ -162,7 +164,7 @@ function Form() {
 
         {/* Description */}
         <section>Описание</section>
-        <p>Ввод: {inputData.description}</p>
+
         <input
           type="text"
           value={inputData.description}
